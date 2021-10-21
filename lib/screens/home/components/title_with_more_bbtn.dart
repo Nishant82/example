@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-class TitleWithMorebtr extends StatelessWidget {
-  const TitleWithMorebtr({
+
+class TitleWithMorebtn extends StatelessWidget {
+  const TitleWithMorebtn({
     Key? key,
     required this.title,
     required this.press,
@@ -19,6 +20,18 @@ class TitleWithMorebtr extends StatelessWidget {
           TitleWithCustomUnderline(text: title),
           Spacer(),
           ElevatedButton(
+            
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.green),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  
+                  side: BorderSide(color: kPrimaryColor),
+                ),
+              ),
+            ),
             onPressed: press(),
             child: Text(
               "More",

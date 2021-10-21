@@ -1,5 +1,6 @@
 import 'package:example/components/header_with_seachbox.dart';
 import 'package:example/constants.dart';
+import 'package:example/screens/home/components/title_with_more_bbtn.dart';
 import 'package:flutter/material.dart';
 
 // import 'title_with_more_bbtn.dart';
@@ -14,24 +15,26 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          // TitleWithMoreBtn(title: "Recomended", press: () {}),
-          // RecomendPlantCard()
+          TitleWithMorebtn(title: "Recomended", press: () {}),
+          RecomendPlantCard(image: "https://bit.ly/3G6gVKD", title: "title", country: "country", prices: 200)
         ],
       ),
     );
   }
 
-  // TitleWithMoreBtn({String title, Function() press}) {}
+
 }
 
 class RecomendPlantCard extends StatelessWidget {
   const RecomendPlantCard({
-    Key? key,required this.image,required this.title,required this.country,required this.press,required this.prices
+    Key? key,required this.image,required this.title,required this.country,
+    //required this.press,
+    required this.prices
   }) : super(key: key);
 
   final String image, title, country;
   final int prices;
-  final Function press;
+  // final Function press;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,7 @@ class RecomendPlantCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.network(
-              "https://png.pngtree.com/png-vector/20191018/ourlarge/pngtree-plant-seed-logo-design-png-image_1824179.jpg"),
+              image),
           GestureDetector(
             onTap: (){},
             child: Container(

@@ -13,7 +13,7 @@ class HeaderWithSearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: kDefaultPadding *2.5),
+      margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
       height: size.height * 0.2,
       child: Stack(
         children: <Widget>[
@@ -33,14 +33,13 @@ class HeaderWithSearchBox extends StatelessWidget {
             ),
             child: Row(
               children: <Widget>[
-                Text(
-                  'Hi Uishopy!',
-                  style: Theme.of(context).textTheme.headline5
-                      
-                ),
+                Text('Hi Uishopy!',
+                    style: Theme.of(context).textTheme.headline5),
                 Spacer(),
-                Image.network(
-                    "https://cdn.dribbble.com/users/2162265/screenshots/5816007/media/5ce9f7fbfc412dc21ecacfb6798176a9.png?compress=1&resize=400x300")
+                CircleAvatar(
+                  radius: 30,
+                  backgroundImage: NetworkImage("https://bit.ly/3B4DKKK"),
+                ),
               ],
             ),
           ),
@@ -90,6 +89,7 @@ class HeaderWithSearchBox extends StatelessWidget {
     );
   }
 }
+
 class HeaderWithSearchBox2 extends StatelessWidget {
   const HeaderWithSearchBox2({
     Key? key,
@@ -101,7 +101,7 @@ class HeaderWithSearchBox2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: kDefaultPadding *2.5),
+      margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
       height: size.height * 0.2,
       child: Stack(
         children: <Widget>[
@@ -121,11 +121,8 @@ class HeaderWithSearchBox2 extends StatelessWidget {
             ),
             child: Row(
               children: <Widget>[
-                Text(
-                  'Hi Uishopy!',
-                  style: Theme.of(context).textTheme.headline5
-                      
-                ),
+                Text('Hi Uishopy!',
+                    style: Theme.of(context).textTheme.headline5),
                 Spacer(),
                 Image.network(
                     "https://cdn.dribbble.com/users/2162265/screenshots/5816007/media/5ce9f7fbfc412dc21ecacfb6798176a9.png?compress=1&resize=400x300")
